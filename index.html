@@ -23,17 +23,14 @@
         <h1>My List</h1>
         <section class="task-input">
             <input id="task-input" type="text" placeholder="Add a new task">
-            <button type="button" onclick="add()">Send</button>
+            <button type="submit" onclick="add()">Send</button>
         </section>
         <section class="tasks">
             <section id="tasks-doing" class="tasks-doing test">
-<!--                 <article class="tasks-item">task
-                    <img class="img" src="./img/close.svg" alt="">
-                </article> -->
             </section>
             <section class="tasks-done test">
                 <article class="tasks-item">task
-                    <img class="img" src="./img/close.svg" alt="">
+                    <img class="img" src="./img/close.svg" onclick="deleteItem()" alt="">
                 </article>
             </section>
         </section>
