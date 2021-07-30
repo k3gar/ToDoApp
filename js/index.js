@@ -1,9 +1,10 @@
 //Crear elementos en la lista
-let crearElementosLista = ((elemento) => {
+let crearElementosLista = ((elemento, identify) => {
     let contenido = document.createTextNode(elemento)
     let tasksDoing = document.getElementById("tasks-doing")
     let taskItem = document.createElement("article")
     taskItem.className += "tasks-item"
+    taskItem.id = identify
     taskItem.appendChild(contenido)
     tasksDoing.appendChild(taskItem)
     let img = document.createElement("img");
@@ -22,7 +23,9 @@ if(localStorage.getItem('prueba') != null){
     let prueba = JSON.parse(localStorage.getItem("prueba"))
 
     prueba.forEach(item => {
-        crearElementosLista(item);
+        let identify = prueba.indexOf(item)
+        crearElementosLista(item, identify);
+        console.log(prueba.indexOf(item))
     });
 }else{
     let prueba = []
@@ -34,9 +37,17 @@ if(localStorage.getItem('prueba') != null){
 let add = (() => {
     let input = document.getElementById("task-input").value
     if(input === ""){
-        alert('Ingrese una tarea')
+        swal({
+            title: 'Ocurrió un error',
+            text: "Debe ingresar una tarea",
+            icon: "error"
+        })
+
+//Añadir id con numero de posición
     }else{
         let prueba = JSON.parse(localStorage.getItem("prueba"))
+        
+        console.log(prueba.lenght)
         prueba.push(input)
         localStorage.setItem("prueba", JSON.stringify(prueba))
         document.getElementById("task-input").value = "";

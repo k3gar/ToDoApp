@@ -72,5 +72,18 @@ main{
         }
     }
 }
+.swal-modal{
+    background-color: #ff78bd;
+    border-radius: 25px;
+}
+.swal-icon:first-child {
+    background-color: black;
+}
+.swal-icon--error__line, .swal-icon--error{
+    background-color: #f3324e;
+}
+.swal-title, .swal-text{
+    color: black
+}
 
 @import './components/media';
