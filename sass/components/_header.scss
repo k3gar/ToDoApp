@@ -4,6 +4,14 @@ header{
     justify-content: center;
     align-items: center;
     height: 93px;
+    position: relative;
+    .header--menu{
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        width: 35px;
+        height: 35px;
+    }
     img{
         width: 44px;
         height: 63.25px;

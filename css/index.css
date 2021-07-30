@@ -22,6 +22,15 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 93px;
+  position: relative;
+}
+
+header .header--menu {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 header img {
@@ -106,8 +115,9 @@ main {
 }
 
 .tasks {
-  margin: 20px 0;
+  margin-top: 20px;
   width: 100%;
+  height: 62vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +133,7 @@ main {
 .tasks .test {
   margin: 10px 0;
   width: 100%;
+  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,6 +144,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tasks .tasks-item {
@@ -150,7 +164,7 @@ main {
   height: 13px;
   position: absolute;
   right: 13px;
-  top: 13.5px;
+  top: 13px;
 }
 
 @media (min-width: 768px) {
@@ -179,6 +193,9 @@ main {
   header ul li a:hover {
     color: cadetblue;
   }
+  header .header--menu {
+    display: none;
+  }
   .task-input {
     width: 591px;
     height: 132px;
@@ -189,7 +206,7 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 50vh;
+    height: 57vh;
   }
   .tasks .test {
     border: 1px dashed black;

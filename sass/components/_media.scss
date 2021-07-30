@@ -19,6 +19,10 @@
                 }
             }
         }
+        .header--menu{
+            display: none;
+        }
+
     }
     .task-input{
         width: 591px;
@@ -27,7 +31,7 @@
     }
     .tasks {
         flex-direction: row;
-        height: 50vh;
+        height: 57vh;
         .test{
             border: 1px dashed black;
             padding: 15px;
