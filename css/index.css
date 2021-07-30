@@ -1,0 +1,199 @@
+.box, .task-input input, .task-input button, .tasks .tasks-item {
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+header {
+  background-color: #FEA994;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 93px;
+}
+
+header img {
+  width: 44px;
+  height: 63.25px;
+  left: 158px;
+  top: 14px;
+}
+
+header ul {
+  display: none;
+}
+
+body {
+  background: #FFC2B3;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.task-input {
+  width: 100%;
+  height: 95px;
+  background: #AD6857;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-input input {
+  min-width: 70%;
+  margin-right: 9px;
+  height: 44px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.task-input button {
+  width: 20%;
+  height: 44px;
+  border: none;
+  background: #67DDB6;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.task-input ::-webkit-input-placeholder {
+  text-align: center;
+  font-weight: bold;
+}
+
+.task-input :-ms-input-placeholder {
+  text-align: center;
+  font-weight: bold;
+}
+
+.task-input ::-ms-input-placeholder {
+  text-align: center;
+  font-weight: bold;
+}
+
+.task-input ::placeholder {
+  text-align: center;
+  font-weight: bold;
+}
+
+.tasks {
+  margin: 20px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tasks .test {
+  margin: 10px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tasks .tasks-item {
+  background: #67DDB6;
+  width: 70%;
+  padding: 10px;
+  -webkit-filter: drop-shadow(-5px 6px 9px rgba(17, 17, 17, 0.25));
+          filter: drop-shadow(-5px 6px 9px rgba(17, 17, 17, 0.25));
+  text-align: center;
+  position: relative;
+}
+
+.tasks .tasks-item img {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: 13px;
+  top: 13.5px;
+}
+
+@media (min-width: 768px) {
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  header img {
+    margin-left: 15px;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin-left: 25px;
+  }
+  header ul li {
+    padding: 25px;
+  }
+  header ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  header ul li a:hover {
+    color: cadetblue;
+  }
+  .task-input {
+    width: 591px;
+    height: 132px;
+    border-radius: 15px;
+  }
+  .tasks {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 50vh;
+  }
+  .tasks .test {
+    border: 1px dashed black;
+    padding: 15px;
+    height: 100%;
+  }
+}

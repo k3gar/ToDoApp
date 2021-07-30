@@ -1,0 +1,72 @@
+@import './components/globals';
+@import './components/header';
+body{
+    background: $background-pink;
+}
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.task-input {
+    width: 100%;
+    height: 95px;
+    background: #AD6857;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        min-width: 70%;
+        margin-right: 9px;
+        height: 44px;
+        border: none;
+        outline: none;
+        text-align: center;
+        @extend .box
+    }
+    button {
+        width: 20%;
+        height: 44px;
+        border: none;
+        background: $task-color;
+        font-weight: bold;
+        font-size: 1rem;
+        @extend .box
+    }
+    ::placeholder{
+        text-align: center;
+        font-weight: bold;
+    }
+}
+.tasks{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .test{
+        margin: 10px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tasks-item{
+        background: $task-color;
+        width: 70%;
+        padding: 10px;
+        filter: drop-shadow(-5px 6px 9px rgba(17, 17, 17, 0.25));
+        text-align: center;
+        position: relative;
+        @extend .box;
+        img {
+            width: 13px;
+            height: 13px;
+            position: absolute;
+            right: 13px;
+            top: 13.5px;
+        }
+    }
+}
+
+@import './components/media';

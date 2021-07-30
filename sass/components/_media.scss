@@ -1,0 +1,38 @@
+@media(min-width: 768px){
+    header{
+        justify-content: start;
+        img{
+            margin-left: 15px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            margin-left: 25px;
+            li{
+                padding: 25px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover{
+                    color: cadetblue;
+                }
+            }
+        }
+    }
+    .task-input{
+        width: 591px;
+        height: 132px;
+        border-radius: 15px;
+    }
+    .tasks {
+        flex-direction: row;
+        height: 50vh;
+        .test{
+            border: 1px dashed black;
+            padding: 15px;
+            height: 100%;
+        }
+        
+    }
+}

@@ -1,0 +1,16 @@
+header{
+    background-color: $header-pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93px;
+    img{
+        width: 44px;
+        height: 63.25px;
+        left: 158px;
+        top: 14px;
+    }
+    ul{
+        display: none;
+    }
+}

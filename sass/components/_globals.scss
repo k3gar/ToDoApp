@@ -1,0 +1,15 @@
+$Font: 'Varela Round';
+$header-pink: #FEA994;
+$background-pink: #FFC2B3;
+$task-color: #67DDB6;
+$task-done: rgba(243, 50, 78, 0.7);
+.box{
+    border-radius: 10px;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $Font, sans-serif;;
+}
