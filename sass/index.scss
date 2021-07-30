@@ -57,6 +57,7 @@ main{
     .tasks-item{
         background: $task-color;
         width: 70%;
+        margin: 8px 0;
         padding: 10px;
         filter: drop-shadow(-5px 6px 9px rgba(17, 17, 17, 0.25));
         text-align: center;

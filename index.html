@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/index.js"></script>
 </head>
 <body>
     <header>
@@ -23,14 +22,14 @@
     <main>
         <h1>My List</h1>
         <section class="task-input">
-            <input type="text" placeholder="Add a new task">
-            <button type="button">Send</button>
+            <input id="task-input" type="text" placeholder="Add a new task">
+            <button type="button" onclick="add()">Send</button>
         </section>
         <section class="tasks">
-            <section class="tasks-doing test">
-                <article class="tasks-item">task
+            <section id="tasks-doing" class="tasks-doing test">
+<!--                 <article class="tasks-item">task
                     <img class="img" src="./img/close.svg" alt="">
-                </article>
+                </article> -->
             </section>
             <section class="tasks-done test">
                 <article class="tasks-item">task
@@ -39,5 +38,6 @@
             </section>
         </section>
     </main>
+    <script src="./js/index.js"></script>
 </body>
 </html>

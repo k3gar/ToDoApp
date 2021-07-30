@@ -1,4 +1,4 @@
-.box, .task-input input, .task-input button, .tasks .tasks-item {
+.box, .tasks .tasks-item, .task-input button, .task-input input {
   border-radius: 10px;
 }
 
@@ -24,7 +24,6 @@ header {
   height: 93px;
   position: relative;
 }
-
 header .header--menu {
   position: absolute;
   left: 20px;
@@ -32,14 +31,12 @@ header .header--menu {
   width: 35px;
   height: 35px;
 }
-
 header img {
   width: 44px;
   height: 63.25px;
   left: 158px;
   top: 14px;
 }
-
 header ul {
   display: none;
 }
@@ -75,7 +72,6 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .task-input input {
   min-width: 70%;
   margin-right: 9px;
@@ -84,7 +80,6 @@ main {
   outline: none;
   text-align: center;
 }
-
 .task-input button {
   width: 20%;
   height: 44px;
@@ -93,22 +88,22 @@ main {
   font-weight: bold;
   font-size: 1rem;
 }
-
 .task-input ::-webkit-input-placeholder {
   text-align: center;
   font-weight: bold;
 }
-
+.task-input ::-moz-placeholder {
+  text-align: center;
+  font-weight: bold;
+}
 .task-input :-ms-input-placeholder {
   text-align: center;
   font-weight: bold;
 }
-
 .task-input ::-ms-input-placeholder {
   text-align: center;
   font-weight: bold;
 }
-
 .task-input ::placeholder {
   text-align: center;
   font-weight: bold;
@@ -129,7 +124,6 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .tasks .test {
   margin: 10px 0;
   width: 100%;
@@ -148,17 +142,16 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .tasks .tasks-item {
   background: #67DDB6;
   width: 70%;
+  margin: 8px 0;
   padding: 10px;
   -webkit-filter: drop-shadow(-5px 6px 9px rgba(17, 17, 17, 0.25));
           filter: drop-shadow(-5px 6px 9px rgba(17, 17, 17, 0.25));
   text-align: center;
   position: relative;
 }
-
 .tasks .tasks-item img {
   width: 13px;
   height: 13px;
@@ -196,11 +189,13 @@ main {
   header .header--menu {
     display: none;
   }
+
   .task-input {
     width: 591px;
     height: 132px;
     border-radius: 15px;
   }
+
   .tasks {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
