@@ -13,7 +13,9 @@ let crearElementosLista = ((elemento, identify) => {
     img.id += identify
     img.onclick = function(){
         let prueba = JSON.parse(localStorage.getItem("prueba"))
+        let father = document.getElementById('tasks-doing')
         let idItem = event.srcElement.id
+        father.removeChild(father.childNodes[idItem])
         prueba.splice(idItem, 1)
         localStorage.setItem("prueba", JSON.stringify(prueba))
         location.reload();
