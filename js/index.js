@@ -10,6 +10,14 @@ let crearElementosLista = ((elemento, identify) => {
     let img = document.createElement("img");
     img.src = "../img/close.svg"
     img.className += "img"
+    img.id += identify
+    img.onclick = function(){
+        let prueba = JSON.parse(localStorage.getItem("prueba"))
+        let idItem = event.srcElement.id
+        prueba.splice(idItem, 1)
+        localStorage.setItem("prueba", JSON.stringify(prueba))
+        location.reload();
+    }
     taskItem.appendChild(img)
     console.log(elemento)
 })
@@ -46,18 +54,21 @@ let add = (() => {
 //Añadir id con numero de posición
     }else{
         let prueba = JSON.parse(localStorage.getItem("prueba"))
-        
-        console.log(prueba.lenght)
+        let length = prueba.length
+        console.log(prueba.length)
         prueba.push(input)
         localStorage.setItem("prueba", JSON.stringify(prueba))
         document.getElementById("task-input").value = "";
-        crearElementosLista(input)
+        crearElementosLista(input, length)
     }
 });
 
 //Borrar elementos del array
-let borrar = ((tarea) => {
+/* let borrar = (() => {
     let prueba = JSON.parse(localStorage.getItem("prueba"))
-    prueba.splice(tarea, 1)
+    let idItem = event.srcElement.id
+    prueba.splice(idItem, 1)
     localStorage.setItem("prueba", JSON.stringify(prueba))
-})
+    //document.getElementById().remove()
+
+}) */
