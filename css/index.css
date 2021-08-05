@@ -1,4 +1,4 @@
-.box, .tasks .tasks-item, .task-input button, .task-input input {
+.box, .tasks .tasks-item, .task-input-section button, .task-input-section input {
   border-radius: 10px;
 }
 
@@ -58,7 +58,7 @@ main {
           flex-direction: column;
 }
 
-.task-input {
+.task-input-section {
   width: 100%;
   height: 95px;
   background: #AD6857;
@@ -72,7 +72,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-.task-input input {
+.task-input-section input {
   min-width: 70%;
   margin-right: 9px;
   height: 44px;
@@ -80,7 +80,7 @@ main {
   outline: none;
   text-align: center;
 }
-.task-input button {
+.task-input-section button {
   width: 20%;
   height: 44px;
   border: none;
@@ -88,23 +88,23 @@ main {
   font-weight: bold;
   font-size: 1rem;
 }
-.task-input ::-webkit-input-placeholder {
+.task-input-section ::-webkit-input-placeholder {
   text-align: center;
   font-weight: bold;
 }
-.task-input ::-moz-placeholder {
+.task-input-section ::-moz-placeholder {
   text-align: center;
   font-weight: bold;
 }
-.task-input :-ms-input-placeholder {
+.task-input-section :-ms-input-placeholder {
   text-align: center;
   font-weight: bold;
 }
-.task-input ::-ms-input-placeholder {
+.task-input-section ::-ms-input-placeholder {
   text-align: center;
   font-weight: bold;
 }
-.task-input ::placeholder {
+.task-input-section ::placeholder {
   text-align: center;
   font-weight: bold;
 }
@@ -112,7 +112,6 @@ main {
 .tasks {
   margin-top: 20px;
   width: 100%;
-  height: 62vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,7 +126,6 @@ main {
 .tasks .test {
   margin: 10px 0;
   width: 100%;
-  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,10 +216,8 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 57vh;
   }
   .tasks .test {
-    border: 1px dashed black;
     padding: 15px;
     height: 100%;
   }

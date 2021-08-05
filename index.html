@@ -13,29 +13,26 @@
 </head>
 <body>
     <header>
-        <img class="header--menu" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/>
         <img src="./img/logo.svg" alt="">
+        <div class="header--menu_container header--menu_container_on">
+        <img class="header--menu" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
         </ul>
+        </div>
     </header>
     <main>
         <h1>My List</h1>
-        <section class="task-input">
+        <section class="task-input-section">
             <input id="task-input" type="text" placeholder="Add a new task">
             <button type="submit" onclick="add()">Send</button>
         </section>
         <section class="tasks">
             <section id="tasks-doing" class="tasks-doing test">
             </section>
-            <section class="tasks-done test">
-                <article class="tasks-item">task
-                    <img class="img" src="./img/close.svg" onclick="deleteItem()" alt="">
-                </article>
-            </section>
         </section>
     </main>
-    <script src="./js/index.js"></script>
+    <script src="./js/prueba.js"></script>
 </body>
 </html>

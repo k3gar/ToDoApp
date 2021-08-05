@@ -18,29 +18,39 @@ let crearElementosLista = ((elemento, identify) => {
         father.removeChild(father.childNodes[idItem])
         prueba.splice(idItem, 1)
         localStorage.setItem("prueba", JSON.stringify(prueba))
-        location.reload();
+        arrayInicial()
+        eliminarElementos()
+       // location.reload();
     }
     taskItem.appendChild(img)
     console.log(elemento)
 })
 
+function eliminarElementos() {
+    debugger
+    let elemento = document.getElementById(event.srcElement.id).addEventListener('click', function(){
+    console.log(`Soy el elemento ${elemento}`)
+})}
+
 
 //Revisa si el array vacío existe. 
 //Si existe, nos imprime los elementos del array que ya existen.
 //Si no existe, lo crea
-if(localStorage.getItem('prueba') != null){
-    console.log('prueba existe')
-    let prueba = JSON.parse(localStorage.getItem("prueba"))
-
-    prueba.forEach(item => {
-        let identify = prueba.indexOf(item)
-        crearElementosLista(item, identify);
-        console.log(prueba.indexOf(item))
-    });
-}else{
-    let prueba = []
-    localStorage.setItem("prueba", JSON.stringify(prueba))
-    console.log('else se ejecutó')
+function arrayInicial(){
+    if(localStorage.getItem('prueba') != null){
+        console.log('prueba existe')
+        let prueba = JSON.parse(localStorage.getItem("prueba"))
+    
+        prueba.forEach(item => {
+            let identify = prueba.indexOf(item)
+            crearElementosLista(item, identify);
+            console.log(prueba.indexOf(item))
+        });
+    }else{
+        let prueba = []
+        localStorage.setItem("prueba", JSON.stringify(prueba))
+        console.log('else se ejecutó')
+    }
 }
 
 //Función para añadir elementos al array
@@ -64,6 +74,8 @@ let add = (() => {
         crearElementosLista(input, length)
     }
 });
+
+arrayInicial()
 
 //Borrar elementos del array
 /* let borrar = (() => {
